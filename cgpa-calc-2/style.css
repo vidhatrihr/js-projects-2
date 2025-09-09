@@ -24,6 +24,20 @@ table {
   text-align: center;
 }
 
+tr.foundation,
+tr.diploma-ds {
+  background-color: antiquewhite;
+}
+
+tr.diploma-dp,
+tr.degree {
+  background-color: aquamarine;
+}
+
+thead {
+  background-color: lightblue;
+}
+
 .course-name {
   text-align: left;
 }

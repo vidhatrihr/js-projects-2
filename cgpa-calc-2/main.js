@@ -7,148 +7,85 @@ const points = {
   e: 4,
 };
 
-credits = {
-  english1: 4,
-  maths1: 4,
-};
-
 const courses = {
-  maths1: {
-    credit: 4,
-    fullname: 'Mathematics for Data Science I',
-  },
-  stats1: {
-    credit: 4,
-    fullname: 'Statistics for Data Science I',
-  },
-  ct: {
-    credit: 4,
-    fullname: 'Computational Thinking',
-  },
-  english1: {
-    credit: 4,
-    fullname: 'English I',
-  },
-  maths2: {
-    credit: 4,
-    fullname: 'Mathematics for Data Science II',
-  },
-  stats2: {
-    credit: 4,
-    fullname: 'Statistics for Data Science II',
-  },
-  python: {
-    credit: 4,
-    fullname: 'Programming in Python',
-  },
-  english2: {
-    credit: 4,
-    fullname: 'English II',
-  },
-  dbms: {
-    credit: 4,
-    fullname: 'Database Management Systems',
-  },
+  english1: { credit: 4, fullname: 'English I', level: 'foundation' },
+  english2: { credit: 4, fullname: 'English II', level: 'foundation' },
+  maths1: { credit: 4, fullname: 'Mathematics for Data Science I', level: 'foundation' },
+  maths2: { credit: 4, fullname: 'Mathematics for Data Science II', level: 'foundation' },
+  stats1: { credit: 4, fullname: 'Statistics for Data Science I', level: 'foundation' },
+  stats2: { credit: 4, fullname: 'Statistics for Data Science II', level: 'foundation' },
+  ct: { credit: 4, fullname: 'Computational Thinking', level: 'foundation' },
+  python: { credit: 4, fullname: 'Programming in Python', level: 'foundation' },
+
+  dbms: { credit: 4, fullname: 'Database Management Systems', level: 'diploma-dp' },
   pdsa: {
     credit: 4,
     fullname: 'Programming, Data Structures and Algorithms using Python',
+    level: 'diploma-dp',
   },
-  mad1: {
-    credit: 4,
-    fullname: 'Modern Application Development I',
-  },
+  mad1: { credit: 4, fullname: 'Modern Application Development I', level: 'diploma-dp' },
   mad1Proj: {
     credit: 2,
     fullname: 'Modern Application Development I - Project',
+    level: 'diploma-dp',
   },
-  java: {
-    credit: 4,
-    fullname: 'Programming Concepts using Java',
-  },
-  mad2: {
-    credit: 4,
-    fullname: 'Modern Application Development II',
-  },
+  mad2: { credit: 4, fullname: 'Modern Application Development II', level: 'diploma-dp' },
   mad2Proj: {
     credit: 2,
     fullname: 'Modern Application Development II - Project',
+    level: 'diploma-dp',
   },
-  sc: {
-    credit: 3,
-    fullname: 'System Commands',
-  },
-  mlf: {
-    credit: 4,
-    fullname: 'Machine Learning Foundations',
-  },
-  bdm: {
-    credit: 4,
-    fullname: 'Business Data Management',
-  },
-  mlt: {
-    credit: 4,
-    fullname: 'Machine Learning Techniques',
-  },
-  mlp: {
-    credit: 4,
-    fullname: 'Machine Learning Practice',
-  },
-  mlpProj: {
-    credit: 2,
-    fullname: 'Machine Learning Practice - Project',
-  },
-  tds: {
-    credit: 3,
-    fullname: 'Tools in Data Science',
-  },
-  bdmProj: {
-    credit: 2,
-    fullname: 'Business Data Management - Project',
-  },
-  ba: {
-    credit: 4,
-    fullname: 'Business Analytics',
-  },
-  dl: {
+  java: { credit: 4, fullname: 'Programming Concepts using Java', level: 'diploma-dp' },
+  sc: { credit: 3, fullname: 'System Commands', level: 'diploma-dp' },
+
+  mlf: { credit: 4, fullname: 'Machine Learning Foundations', level: 'diploma-ds' },
+  mlt: { credit: 4, fullname: 'Machine Learning Techniques', level: 'diploma-ds' },
+  mlp: { credit: 4, fullname: 'Machine Learning Practice', level: 'diploma-ds' },
+  mlpProj: { credit: 2, fullname: 'Machine Learning Practice - Project', level: 'diploma-ds' },
+  tds: { credit: 3, fullname: 'Tools in Data Science', level: 'diploma-ds' },
+  bdm: { credit: 4, fullname: 'Business Data Management', level: 'diploma-ds' },
+  bdmProj: { credit: 2, fullname: 'Business Data Management - Project', level: 'diploma-ds' },
+  ba: { credit: 4, fullname: 'Business Analytics', level: 'diploma-ds' },
+  dlGenAi: {
     credit: 4,
     fullname: 'Introduction to Deep Learning and Generative AI',
+    level: 'diploma-ds',
   },
-  dlProj: {
+  dlGenAiProj: {
     credit: 2,
     fullname: 'Deep Learning and Generative AI - Project',
+    level: 'diploma-ds',
   },
-  se: {
-    credit: 4,
-    fullname: 'Software Engineering',
-  },
-  st: {
-    credit: 4,
-    fullname: 'Software Testing',
-  },
-  ai: {
-    credit: 4,
-    fullname: 'AI: Search Methods for Problem Solving',
-  },
-  dlCore: {
-    credit: 4,
-    fullname: 'Deep Learning',
-  },
-  spg: {
-    credit: 4,
-    fullname: 'Strategies for Professional Growth',
-  },
+
+  se: { credit: 4, fullname: 'Software Engineering', level: 'degree' },
+  st: { credit: 4, fullname: 'Software Testing', level: 'degree' },
+  ai: { credit: 4, fullname: 'AI: Search Methods for Problem Solving', level: 'degree' },
+  dl: { credit: 4, fullname: 'Deep Learning', level: 'degree' },
+  spg: { credit: 4, fullname: 'Strategies for Professional Growth', level: 'degree' },
 };
 
-const coursesArr = Object.keys(courses);
+const grades = JSON.parse(localStorage.getItem('grades')) ?? {};
 
-coursesArr.forEach(course => {
-  const temp = document.querySelector('#tr-template');
-  const clone = temp.content.cloneNode(true);
-  clone.querySelector('.course-name').innerText = courses[course].fullname;
-  clone.querySelector('.course-credit').innerText = courses[course].credit;
-  clone.querySelector('select').id = `${course}-input`;
-  document.querySelector('tbody').append(clone);
-});
+initializeTable();
+calculate();
+
+function initializeTable() {
+  Object.keys(courses).forEach(course => {
+    const temp = document.querySelector('#tr-template');
+    const clone = temp.content.cloneNode(true);
+
+    clone.querySelector('tr').classList.add(courses[course].level);
+    clone.querySelector('.course-name').innerText = courses[course].fullname;
+    clone.querySelector('.course-credit').innerText = courses[course].credit;
+
+    clone.querySelector('select').id = `${course}-input`;
+    clone.querySelector('select').addEventListener('change', event => {
+      updateGrades(course, event.target.value);
+    });
+    clone.querySelector('select').value = grades[course] ?? '';
+    document.querySelector('tbody').append(clone);
+  });
+}
 
 // coursesArr.forEach(course => {
 //   const html = `
@@ -170,35 +107,28 @@ coursesArr.forEach(course => {
 //   document.querySelector('tbody').innerHTML += html;
 // });
 
+function updateGrades(course, grade) {
+  grades[course] = grade;
+  calculate();
+}
+
 function calculate() {
   let numerator = 0;
   let denominator = 0;
-  const grades = {};
-  coursesArr.forEach(course => {
-    const grade = document.querySelector(`#${course}-input`).value;
-    if (grade != '') {
-      numerator += points[grade] * courses[course].credit;
-      denominator += courses[course].credit;
-    }
-    grades[course] = grade;
+
+  Object.keys(grades).forEach(course => {
+    const grade = grades[course];
+    numerator += points[grade] * courses[course].credit;
+    denominator += courses[course].credit;
   });
-  const result = numerator / denominator;
-  document.querySelector('#result').innerText = `CGPA: ${result.toFixed(2)}`;
+
+  const cgpa = numerator / denominator || 0;
+  document.querySelector('#result').innerText = `CGPA: ${numerator} / ${denominator} = ${
+    Math.ceil(cgpa * 100) / 100
+  }`;
   saveToLocalStorage(grades);
 }
 
 function saveToLocalStorage(grades) {
   localStorage.setItem('grades', JSON.stringify(grades));
 }
-
-function restoreFromLocalStorage() {
-  const grades = JSON.parse(localStorage.getItem('grades'));
-
-  // if (grades == null) return;
-
-  coursesArr.forEach(course => {
-    document.querySelector(`#${course}-input`).value = grades[course];
-  });
-  calculate();
-}
-restoreFromLocalStorage();
