@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  margin-left: 5px;
+}
+
+h1,
+h2 {
+  margin: 0.25em 0;
+  text-align: center;
+}
+
+section {
+  border: 1px solid red;
+}
+
+section.large {
+  width: 700px;
+  height: 700px;
+}
+
+section.small {
+  height: 300px;
+  width: 300px;
+}
+
+p {
+  margin-top: 25px;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: darkslateblue;
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 5px;
+}
+
+.align-item {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.dont-shrink div {
+  flex-shrink: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow div {
+  flex-grow: 1;
+}
+
+/* ====== column ====== */
+
+.column-flex {
+  flex-direction: column;
+}

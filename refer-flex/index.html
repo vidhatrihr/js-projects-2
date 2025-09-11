@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flex Basics</title>
+  </head>
+  <body>
+    <main>
+      <h1>Flex Basics</h1>
+      <h2>Default flex, major axis (horizontal)</h2>
+
+      <p>plain</p>
+      <section>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, major access (horizontal)</p>
+      <section class="flex">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap</p>
+      <section class="flex gap">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center</p>
+      <span>didn't change, parent and child are of same height</span>
+      <section class="flex gap align-item">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, parent is large</p>
+      <span>row wise center</span>
+      <section class="flex gap align-item large">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, justify-content center, parent is large</p>
+      <span>column wise center</span>
+      <section class="flex gap align-item large justify-center">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, justify-content: space-around, parent is large</p>
+      <span>column wise center</span>
+      <section class="flex gap align-item large justify-space-around">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, justify-content: space-between, parent is large</p>
+      <span>column wise center</span>
+      <section class="flex gap align-item large justify-space-between">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, justify-content: space-evenly, parent is large</p>
+      <span>column wise center</span>
+      <section class="flex gap align-item large justify-space-evenly">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, gap, align item center, justify-content: end, parent is large</p>
+      <span>column wise center</span>
+      <section class="flex gap align-item large justify-end">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>more boxes items shrink to get fit within</p>
+      <section class="flex gap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+      </section>
+
+      <p>more boxes, flex shrink:0</p>
+      <section class="flex gap dont-shrink">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, overflow: hidden</p>
+      <section class="flex gap dont-shrink overflow-hidden">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, overflow: auto</p>
+      <section class="flex gap dont-shrink overflow-auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, overflow: hidden, with wrap</p>
+      <section class="flex gap dont-shrink overflow-hidden wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+      </section>
+
+      <p>flex, wrap, flex-grow</p>
+      <section class="flex gap flex-grow wrap">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>flex, wrap, flex-grow 1 for A,C and 0.5 for B</p>
+      <section class="flex gap flex-grow wrap">
+        <div>A</div>
+        <div style="flex-grow: 0.5">B</div>
+        <div>C</div>
+      </section>
+
+      <h2>column flex, minor axis (vertical)</h2>
+
+      <p>display flex, column</p>
+      <section class="flex column-flex">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>display flex, column, gap</p>
+      <section class="flex column-flex gap">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </section>
+
+      <p>flex column, more boxes items shrink to get fit within, parent is small</p>
+      <section class="flex column-flex small gap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div style="background-color: darkmagenta">9</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, parent is small</p>
+      <span>same size boxes that overflow</span>
+      <section class="flex column-flex small gap dont-shrink">
+        <div>1</div>
+        <div style="background-color: darkmagenta">2</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, wrap, parent is small</p>
+      <section class="flex column-flex small gap wrap dont-shrink">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </section>
+
+      <p>more boxes, flex shrink:0, overflow-auto, parent is small</p>
+      <section class="flex column-flex small gap dont-shrink overflow-auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </section>
+
+      <p>align-item center</p>
+      <span>column wise center</span>
+      <section class="flex column-flex gap align-item">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </section>
+
+      <p>justify-content: center, parent is large</p>
+      <span>row wise center</span>
+      <section class="flex column-flex gap justify-center large">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </section>
+
+      <p>z index</p>
+      <section class="flex small gap dont-shrink">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <img src="image.png" alt="bee" />
+      </section>
+    </main>
+  </body>
+</html>
