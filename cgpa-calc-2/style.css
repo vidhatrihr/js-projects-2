@@ -38,10 +38,27 @@ thead {
   background-color: lightblue;
 }
 
-.course-name {
+th,
+td {
+  padding: 5px;
+}
+
+td.course-name {
   text-align: left;
 }
 
 select {
   height: 1.5rem;
+}
+
+#json-input {
+  display: flex;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+#json-input .left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
