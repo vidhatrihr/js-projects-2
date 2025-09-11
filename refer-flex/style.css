@@ -23,8 +23,7 @@ section {
 }
 
 section.large {
-  width: 700px;
-  height: 700px;
+  height: 300px;
 }
 
 section.small {

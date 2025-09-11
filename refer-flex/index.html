@@ -11,14 +11,14 @@
       <h1>Flex Basics</h1>
       <h2>Default flex, major axis (horizontal)</h2>
 
-      <p>plain</p>
+      <p>without flex</p>
       <section>
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, major access (horizontal)</p>
+      <p>display flex</p>
       <section class="flex">
         <div>A</div>
         <div>B</div>
@@ -32,7 +32,7 @@
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center</p>
+      <p>display flex, gap, align-item center</p>
       <span>didn't change, parent and child are of same height</span>
       <section class="flex gap align-item">
         <div>A</div>
@@ -40,48 +40,44 @@
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, parent is large</p>
-      <span>row wise center</span>
+      <p>display flex, gap, align-item center, large box</p>
+      <span>column wise center</span>
       <section class="flex gap align-item large">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, justify-content center, parent is large</p>
-      <span>column wise center</span>
+      <p>display flex, gap, align-item center, justify-content center, large box</p>
+      <span>row wise center</span>
       <section class="flex gap align-item large justify-center">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, justify-content: space-around, parent is large</p>
-      <span>column wise center</span>
+      <p>display flex, gap, align-item center, justify-content: space-around, large box</p>
       <section class="flex gap align-item large justify-space-around">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, justify-content: space-between, parent is large</p>
-      <span>column wise center</span>
+      <p>display flex, gap, align-item center, justify-content: space-between, large box</p>
       <section class="flex gap align-item large justify-space-between">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, justify-content: space-evenly, parent is large</p>
-      <span>column wise center</span>
+      <p>display flex, gap, align-item center, justify-content: space-evenly, large box</p>
       <section class="flex gap align-item large justify-space-evenly">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </section>
 
-      <p>display flex, gap, align item center, justify-content: end, parent is large</p>
-      <span>column wise center</span>
+      <p>display flex, gap, align-item center, justify-content: end, large box</p>
       <section class="flex gap align-item large justify-end">
         <div>A</div>
         <div>B</div>
@@ -222,7 +218,7 @@
         <div>C</div>
       </section>
 
-      <h2>column flex, minor axis (vertical)</h2>
+      <h2>Flex direction column, major axis (vertical)</h2>
 
       <p>display flex, column</p>
       <section class="flex column-flex">
@@ -238,7 +234,7 @@
         <div>C</div>
       </section>
 
-      <p>flex column, more boxes items shrink to get fit within, parent is small</p>
+      <p>flex column, more boxes items shrink to get fit within, small box</p>
       <section class="flex column-flex small gap">
         <div>1</div>
         <div>2</div>
@@ -248,40 +244,51 @@
         <div>6</div>
         <div>7</div>
         <div>8</div>
-        <div style="background-color: darkmagenta">9</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div style="background-color: darkmagenta">12</div>
       </section>
 
-      <p>more boxes, flex shrink:0, parent is small</p>
+      <p>more boxes, flex shrink:0, small box</p>
       <span>same size boxes that overflow</span>
       <section class="flex column-flex small gap dont-shrink">
         <div>1</div>
-        <div style="background-color: darkmagenta">2</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="background-color: darkmagenta">4</div>
       </section>
-
-      <p>more boxes, flex shrink:0, wrap, parent is small</p>
+      <br /><br /><br /><br /><br /><br />
+      <p>more boxes, flex shrink:0, wrap, small box</p>
       <section class="flex column-flex small gap wrap dont-shrink">
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
       </section>
 
-      <p>more boxes, flex shrink:0, overflow-auto, parent is small</p>
+      <p>more boxes, flex shrink:0, overflow-auto, small box</p>
       <section class="flex column-flex small gap dont-shrink overflow-auto">
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
       </section>
 
       <p>align-item center</p>
-      <span>column wise center</span>
+      <span>row wise center</span>
       <section class="flex column-flex gap align-item">
         <div>1</div>
         <div>2</div>
         <div>3</div>
       </section>
 
-      <p>justify-content: center, parent is large</p>
-      <span>row wise center</span>
+      <p>justify-content: center, large box</p>
+      <span>column wise center</span>
       <section class="flex column-flex gap justify-center large">
         <div>1</div>
         <div>2</div>
