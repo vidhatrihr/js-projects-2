@@ -1,3 +1,4 @@
 [CGPA Calculator](https://vidhatrihr.github.io/js-projects-2/cgpa-calc)
 [CGPA Calculator](https://vidhatrihr.github.io/js-projects-2/cgpa-calc-2)
 [Flex basics](https://vidhatrihr.github.io/js-projects-2/refer-flex)
+[Js array methods](https://vidhatrihr.github.io/js-projects-2/array-methods)
