@@ -6,15 +6,28 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  padding-left: 5px;
   background-color: rgb(249, 249, 248);
 }
 
+section {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container {
+  padding: 5px;
+  flex-grow: 1;
+  flex-basis: 45%;
+  border: 1px dotted yellowgreen;
+}
+
 h1,
-h3 {
+h2 {
   text-align: center;
-  margin: 2rem;
-  color: coral;
+  margin: 1rem;
+  color: rgb(253, 110, 58);
 }
 
 button {
@@ -22,19 +35,13 @@ button {
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
-  background-color: cadetblue;
+  background-color: rgb(54, 151, 155);
   color: white;
   font-size: medium;
 }
 
-.container {
-  margin: 1rem;
-  padding: 5px;
-  border: 1px dotted yellowgreen;
-}
-
 p {
   margin: 10px;
-  color: cornflowerblue;
+  color: rgb(68, 128, 237);
   font-size: 1.5rem;
 }
