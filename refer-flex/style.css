@@ -23,12 +23,11 @@ section {
 }
 
 section.large {
-  height: 300px;
+  height: 350px;
 }
 
 section.small {
   height: 300px;
-  width: 300px;
 }
 
 p {
