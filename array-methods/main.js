@@ -69,8 +69,7 @@ function join() {
 }
 
 function push() {
-  numbers.push(100);
-  console.log(numbers);
+  console.log('length of numbers array after pushing 100 is ', numbers.push(100), numbers);
 }
 
 function pop() {
