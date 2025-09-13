@@ -103,7 +103,9 @@ function shift() {
 function unshift() {
   display(
     'unshift',
-    `new length of the numbers = ${numbers.unshift(100)}, numbers = ${numbers.join(', ')}`
+    `new length of the numbers after unshifting 100 is ${numbers.unshift(
+      100
+    )} and array is ${numbers.join(', ')}`
   );
 }
 

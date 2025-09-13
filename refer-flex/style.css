@@ -22,11 +22,7 @@ section {
   border: 1px solid red;
 }
 
-section.large {
-  height: 350px;
-}
-
-section.small {
+section.fixed-height {
   height: 300px;
 }
 

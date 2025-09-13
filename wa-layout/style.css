@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+main {
+  display: flex;
+}
+
+.toolbar {
+  width: 50px;
+  background-color: antiquewhite;
+}
+
+.chatbox {
+  background-color: aqua;
+}
+
+.inbox {
+  width: 30%;
+  background-color: aquamarine;
+}
