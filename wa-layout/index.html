@@ -3,15 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WhatsApp</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+    <title>WhatsApp</title>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
   </head>
   <body>
     <main>
-      <section class="toolbar">toolbar</section>
-      <section class="chatbox">chatbox</section>
-      <section class="inbox">inbox</section>
+      <!-- toolbar -->
+      <section class="toolbar">
+        <div class="toolbar-top">
+          <button><iconify-icon icon="uiw:message"></iconify-icon></button>
+          <button><iconify-icon icon="f7:status"></iconify-icon></button>
+          <button><iconify-icon icon="majesticons:chat-status-line"></iconify-icon></button>
+          <button><iconify-icon icon="fluent:people-community-12-regular"></iconify-icon></button>
+          <button><iconify-icon icon="gravity-ui:circle"></iconify-icon></button>
+        </div>
+        <div class="toolbar-bottom">
+          <button><iconify-icon icon="ion:settings-outline"></iconify-icon></button>
+          <button><iconify-icon icon="ooui:user-avatar"></iconify-icon></button>
+        </div>
+      </section>
+
+      <!-- inbox -->
+      <section class="inbox">
+        <div class="inbox-header">
+          <h2>WhatsApp</h2>
+          <div>
+            <button><iconify-icon icon="ri:chat-new-fill"></iconify-icon></button>
+            <button><iconify-icon icon="qlementine-icons:menu-dots-16"></iconify-icon></button>
+          </div>
+        </div>
+
+        <div class="inbox-search">
+          <input type="text" placeholder="Search or start a new chat" />
+          <div class="inbox-search-filters">
+            <button>All</button>
+            <button>Unread</button>
+            <button>Favorites</button>
+            <button>Groups</button>
+          </div>
+        </div>
+
+        <div class="inbox-main">
+          <div class="inbox-chat">
+            <div class="inbox-chat-avatar">
+              <button>
+                <iconify-icon icon="ooui:user-avatar"></iconify-icon>
+              </button>
+            </div>
+            <div class="inbox-chat-details">
+              <div class="row-1">
+                <p class="inbox-chat-username">Rahul</p>
+                <p class="inbox-chat-time">11:11pm</p>
+              </div>
+              <div class="row-2">
+                <p class="inbox-chat-body">hello vishnu</p>
+                <p class="inbox-chat-count">2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chatbox"></section>
     </main>
   </body>
 </html>

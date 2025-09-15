@@ -9,24 +9,120 @@ body {
 }
 
 iconify-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  font-size: 1.5rem;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:has(iconify-icon) {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+button:has(iconify-icon):hover {
+  background-color: rgb(249, 189, 189);
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
 main {
   display: flex;
 }
 
+/* toolbar styles */
+
 .toolbar {
-  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  padding: 5px;
   background-color: antiquewhite;
 }
 
-.chatbox {
-  background-color: aqua;
+.toolbar-top,
+.toolbar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
+/* inbox styles */
+
 .inbox {
-  width: 30%;
+  width: 300px;
   background-color: aquamarine;
+}
+
+.inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.inbox-search {
+  padding: 10px;
+}
+
+.inbox-search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.inbox-search-filters {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.inbox-search button {
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.inbox-chat {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border: 1px solid red;
+}
+
+.inbox-chat-details {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.inbox-chat-details .row-1,
+.inbox-chat-details .row-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inbox-chat-username {
+  font-weight: bold;
+}
+
+/* chatbox styles */
+
+.chatbox {
+  flex-grow: 1;
+  background-color: lightblue;
 }
