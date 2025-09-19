@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(249, 248, 247);
+}
+
+h1 {
+  margin-top: 1rem;
+  color: brown;
+}
+
+main {
+  text-align: center;
+  font-family: cursive;
+}
+
+.container {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: -4px 4px #e0e0e0;
+  cursor: pointer;
+}
+
+.box:active {
+  transform: translateY(1px);
+}

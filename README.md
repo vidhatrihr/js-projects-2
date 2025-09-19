@@ -5,3 +5,7 @@
 
 - [Flex basics](https://vidhatrihr.github.io/js-projects-2/refer-flex)
 - [Js array methods](https://vidhatrihr.github.io/js-projects-2/array-methods)
+
+  ***
+
+- [Random Color Generator](https://vidhatrihr.github.io/js-projects-2/random-color-generator)
