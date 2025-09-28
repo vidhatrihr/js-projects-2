@@ -11,3 +11,5 @@
 - [Random Color Generator](https://vidhatrihr.github.io/js-projects-2/random-color-generator)
 
 - [Random Password Generator](https://vidhatrihr.github.io/js-projects-2/random-password-generator)
+
+- [Image Search App](https://vidhatrihr.github.io/js-projects-2/image-search-app)
