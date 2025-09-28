@@ -8,3 +8,70 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button,
+input {
+  padding: 10px;
+  border: none;
+}
+
+button {
+  background-color: rgb(5, 152, 244);
+  color: white;
+}
+
+input {
+  border: 2px solid rgb(5, 152, 244);
+}
+
+.image-container {
+  padding: 20px;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.search-container {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-result {
+  margin-bottom: 20px;
+  break-inside: avoid;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 10px 10px 3px #ddd5d5;
+}
+
+.image-wrapper {
+  min-height: 100px;
+  overflow: hidden;
+}
+
+.image-result img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s ease-in-out;
+}
+
+.image-result img:hover {
+  transform: scale(1.1);
+}
+
+.image-result p {
+  padding: 10px;
+}
+
+.image-result p.light-text {
+  color: #fff;
+  text-shadow: 0 0 2px #222;
+}
+
+.image-result p.dark-text {
+  color: #222;
+  text-shadow: 0 0 2px #fff;
+}
