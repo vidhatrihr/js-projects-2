@@ -9,6 +9,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   background-color: black;
+  font-size: 2rem;
 }
 
 main {
@@ -24,24 +25,22 @@ h1 {
 }
 
 input {
+  padding: 8px;
+  width: 15rem;
   float: right;
   outline: none;
-  padding-left: 5px;
   box-shadow: 2px 2px 10px #655b5b;
 }
 
 .box {
+  padding: 1rem;
   border: 3px solid darkgrey;
+  box-shadow: -1px 4px 6px #e2dbdb;
 }
 
 label {
   padding: 10px;
   text-shadow: 5px 3px 16px #e2dbdb;
-}
-
-.box {
-  padding: 10px;
-  box-shadow: -1px 4px 6px #e2dbdb;
 }
 
 .temp-container {
