@@ -15,3 +15,4 @@
 - [Image Search App 2](https://vidhatrihr.github.io/js-projects-2/image-search-app-2)
 
 - [Temperature Converter](https://vidhatrihr.github.io/js-projects-2/temperature-converter)
+- [Testimonial Slider](https://vidhatrihr.github.io/js-projects-2/testimonial-slider)
