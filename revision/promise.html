@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Hello after 2 sec...');
+          resolve('apple');
+          // reject('Password mismatch');
+        }, 2000);
+      });
+
+      // promise
+      //   .then(result => {
+      //     console.log(result);
+      //   })
+      //   .catch(error => {
+      //     console.log(error);
+      //   });
+
+      // async function test() {
+      //   try {
+      //     let fruit = await promise;
+      //     let response = await fetch('data.json');
+      //     let data = await response.json();
+      //     console.log(`vidu from ${data.place}, eats ${fruit}`);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // }
+
+      // test()
+
+      promise.then(fruit => {
+        fetch('data.json')
+          .then(response => response.json())
+          .then(data => {
+            console.log(`vidu from ${data.place}, eats ${fruit}`);
+          });
+      });
+    </script>
+  </body>
+</html>
