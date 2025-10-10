@@ -42,6 +42,7 @@ iconify-icon {
 }
 
 .project-box {
+  width: 275px;
   padding: 0.8rem;
   background-color: white;
   border-radius: 5px;
@@ -64,11 +65,14 @@ iconify-icon {
 }
 
 img {
+  width: 250px;
+  height: 150px;
   border: 2px solid #eee;
   border-radius: 5px;
 }
 
 .tags span {
+  margin: 2px;
   padding: 2px 8px;
   font-size: 15px;
   background-color: rgb(221 244 221);
@@ -96,6 +100,7 @@ a {
 }
 
 .description {
+  max-height: 40px;
   font-size: 13px;
   color: #4b4a4a;
 }
