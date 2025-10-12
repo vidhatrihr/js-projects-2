@@ -109,25 +109,23 @@ data.forEach(info => {
   });
 
   let projectTemplate = html`
-    <div class="project-box">
-      <div class="image-box">
+    <div class="project">
+      <div class="screenshot">
         <img src="./screenshots/${slug}.png" alt="${title}" />
       </div>
-      <div class="info-box">
-        <h4 class="title">${title}</h4>
-        <p class="description">${description}</p>
-        <div class="date">
-          <iconify-icon icon="guidance:calendar" style="color: #333"></iconify-icon>
-          ${date}
-        </div>
-        <div class="tags">${projectTag}</div>
-        <div class="app-link">
-          <a href="https://vidhatrihr.github.io/js-projects-2/${slug}" target="_blank"
-            >Open Live Preview</a
-          >
-          <iconify-icon icon="cuida:open-in-new-tab-outline"></iconify-icon>
-        </div>
+
+      <h4 class="title">${title}</h4>
+      <p class="description">${description}</p>
+      <div class="date">
+        <iconify-icon icon="guidance:calendar" style="color: #333"></iconify-icon>
+        ${date}
       </div>
+      <div class="tags">${projectTag}</div>
+
+      <a href="https://vidhatrihr.github.io/js-projects-2/${slug}" target="_blank">
+        Open Live Preview
+        <iconify-icon icon="cuida:open-in-new-tab-outline"></iconify-icon>
+      </a>
     </div>
   `;
 
