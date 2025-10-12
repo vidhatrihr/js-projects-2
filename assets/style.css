@@ -55,8 +55,8 @@ iconify-icon {
 }
 
 .project:hover {
-  transform: scale(1.02);
-  box-shadow: 2px 4px 15px #808080;
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .screenshot {
@@ -94,7 +94,7 @@ a {
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: rgb(30, 117, 30);
+  background-color: rgb(35, 135, 35);
   border-radius: 5px;
   text-decoration: none;
 }

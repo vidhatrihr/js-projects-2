@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Testimonial Slider",
+    "description": "Changing testimonial slides.",
+    "date": "2025-10-06",
+    "tags": ["UI", "Timer"],
+    "slug": "testimonial-slider"
+  },
+  {
+    "title": "Temperature Converter",
+    "description": "Convert temperature from three different SI units.",
+    "date": "2025-10-02",
+    "tags": ["Logic", "Unit conversion"],
+    "slug": "temperature-converter"
+  },
+  {
+    "title": "Image Search App 2",
+    "description": "Search any image.",
+    "date": "2025-09-28",
+    "tags": ["API", "Infinite scroll"],
+    "slug": "image-search-app-2"
+  },
+  {
+    "title": "Random Password Generator",
+    "description": "Generate Random valid password.",
+    "date": "2025-09-27",
+    "tags": ["Logic", "Security"],
+    "slug": "random-password-generator"
+  },
+  {
+    "title": "Image Search App",
+    "description": "Search any image.",
+    "date": "2025-09-24",
+    "tags": ["API", "Blurhash"],
+    "slug": "image-search-app"
+  },
+  {
+    "title": "Random Color Generator",
+    "description": "Generate Random colors copy color code on clicking.",
+    "date": "2025-09-19",
+    "tags": ["Logic", "UI"],
+    "slug": "random-color-generator"
+  },
+  {
+    "title": "Whatsapp Layout",
+    "description": "Created whatsapp like layout.",
+    "date": "2025-09-13",
+    "tags": ["UI layout", "Flexbox"],
+    "slug": "wa-layout"
+  },
+  {
+    "title": "Array Methods",
+    "description": "A demonstration of few built-in js methods.",
+    "date": "2025-09-12",
+    "tags": ["JavaScript methods"],
+    "slug": "array-methods"
+  },
+  {
+    "title": "Refer Flex",
+    "description": "A complete demonstration of how display flex works.",
+    "date": "2025-09-11",
+    "tags": ["Flexbox", "UI layout"],
+    "slug": "refer-flex"
+  },
+  {
+    "title": "CGPA Calculator 2",
+    "description": "Calculate your overall CGPA.",
+    "date": "2025-09-08",
+    "tags": ["JSON", "Logic"],
+    "slug": "cgpa-calc-2"
+  },
+  {
+    "title": "CGPA Calculator",
+    "description": "Calculate your overall CGPA.",
+    "date": "2025-09-07",
+    "tags": ["Logic"],
+    "slug": "cgpa-calc"
+  },
+  {
+    "title": "Calculator",
+    "description": "Experience typical calculator.",
+    "date": "2025-08-16",
+    "tags": ["Logic"],
+    "slug": "calculator"
+  },
+  {
+    "title": "Age Calculator",
+    "description": "Enter date of birth, calculates you age.",
+    "date": "2025-08-16",
+    "tags": ["Logic", "Date handling"],
+    "slug": "age-calc"
+  }
+]
