@@ -5,6 +5,13 @@
   font-family: inherit;
 }
 
+iconify-icon {
+  display: inline-block;
+  color: white;
+  width: 1em;
+  height: 1em;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f1f1f1;
@@ -23,20 +30,6 @@ h1 {
   letter-spacing: -2px;
 }
 
-iconify-icon {
-  display: inline-block;
-  color: white;
-  width: 1em;
-  height: 1em;
-}
-
-.title,
-.description,
-.date,
-.tags {
-  padding: 0.7rem 0.5rem;
-}
-
 .container {
   max-width: 1200px;
   display: flex;
@@ -49,9 +42,13 @@ iconify-icon {
 .project {
   width: 275px;
   padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: space-between;
   background-color: white;
   border-radius: 5px;
-  transition: 0.3s ease-out;
+  transition: 0.2s ease-in-out;
 }
 
 .project:hover {
@@ -73,12 +70,31 @@ img {
   border-radius: 5px;
 }
 
+.title {
+  font-size: 1.2rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: #4b4a4a;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #4b4a4a;
+}
+
+.date iconify-icon {
+  color: #4b4a4a;
+}
+
 .tags span {
   margin: 2px;
   padding: 2px 8px;
-  font-size: 15px;
+  font-size: 0.85rem;
   background-color: rgb(221 244 221);
-  color: rgb(55, 168, 55);
+  color: rgb(37, 115, 37);
   border-radius: 10px;
 }
 
@@ -101,15 +117,4 @@ a {
 
 a:hover {
   background-color: rgb(20 94 20);
-}
-
-.description {
-  max-height: 40px;
-  font-size: 13px;
-  color: #4b4a4a;
-}
-
-.date {
-  font-size: 13px;
-  color: #4b4a4a;
 }

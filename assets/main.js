@@ -32,7 +32,7 @@ function renderProjects(data) {
         <h4 class="title">${title}</h4>
         <p class="description">${description}</p>
         <div class="date">
-          <iconify-icon icon="guidance:calendar" style="color: #333"></iconify-icon>
+          <iconify-icon icon="guidance:calendar" inline></iconify-icon>
           ${date}
         </div>
         <div class="tags">${projectTag}</div>
