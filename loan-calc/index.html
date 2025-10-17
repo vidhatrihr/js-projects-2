@@ -15,21 +15,21 @@
           <div>
             <label>
               Principal
-              <input type="number" id="principal" value="200000" />
+              <input type="number" min="0" id="principal" value="100" />
             </label>
           </div>
 
           <div>
             <label>
               Interest Rate (% p.a)
-              <input type="number" id="interest" value="12" />
+              <input type="number" min="0" id="interest" value="12" />
             </label>
           </div>
 
           <div>
             <label>
               Fixed Monthly Payment
-              <input type="number" id="fixed" value="20000" />
+              <input type="number" min="0" id="fixed-payment" value="20" />
             </label>
           </div>
 
@@ -40,7 +40,58 @@
             </label>
           </div>
         </form>
-        <div class="summary-card"></div>
+        <div class="summary">
+          <section class="summary-card">
+            <ul>
+              <li>
+                <strong>Loan completed by: </strong><span class="summary-last-month"> _</span>
+              </li>
+              <li><strong>Total months: </strong><span class="summary-months"> _</span></li>
+              <li>
+                <strong>Total principal paid: </strong><span class="summary-principal"> _</span>
+              </li>
+              <li>
+                <strong>Total interest paid: </strong><span class="summary-interest"> _</span>
+              </li>
+              <li><strong>Total payment: </strong><span class="summary-payment"> _</span></li>
+            </ul>
+          </section>
+          <section class="summary-table">
+            <h1>Amortization Schedule</h1>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Principal Paid</th>
+                    <th>Interest Charged</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 2025</td>
+                    <td>₹19</td>
+                    <td>₹1</td>
+                    <td>₹80</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 2025</td>
+                    <td>₹19</td>
+                    <td>₹1</td>
+                    <td>₹80</td>
+                  </tr>
+                  <tr>
+                    <td>Oct 2025</td>
+                    <td>₹19</td>
+                    <td>₹1</td>
+                    <td>₹80</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   </body>

@@ -1,50 +1,49 @@
-const html = String.raw;
+let principalInput = document.querySelector('#principal');
+let interestInput = document.querySelector('#interest');
+let fixedPaymentInput = document.querySelector('#fixed-payment');
+let checkboxInput = document.querySelector('#checkbox');
 
-let principal = document.querySelector('#principal');
-let interest = document.querySelector('#interest');
-let fixedAmount = document.querySelector('#fixed');
-let checkbox = document.querySelector('#checkbox');
-let summaryCard = document.querySelector('.summary-card');
+let summaryLastMonthEl = document.querySelector('.summary-last-month');
+let summaryMonthsEl = document.querySelector('.summary-months');
+let summaryPrincipalEl = document.querySelector('.summary-principal');
+let summaryInterestEl = document.querySelector('.summary-interest');
+let summaryPaymentEl = document.querySelector('.summary-payment');
 
-calculateMonths();
+principalInput.addEventListener('input', calculateLoan);
+interestInput.addEventListener('input', calculateLoan);
+fixedPaymentInput.addEventListener('input', calculateLoan);
+checkboxInput.addEventListener('change', calculateLoan);
 
-principal.addEventListener('change', () => {
-  calculateMonths();
-});
-interest.addEventListener('change', () => {
-  calculateMonths();
-});
-fixedAmount.addEventListener('change', () => {
-  calculateMonths();
-});
-checkbox.addEventListener('change', () => {
-  calculateMonths();
-});
+calculateLoan();
 
-function calculateMonths() {
-  const monthlyRate = parseFloat(interest.value) / 1200;
+function calculateLoan() {
+  const principal = parseFloat(principalInput.value);
+  const interestRate = parseFloat(interestInput.value) / 100 / 12;
+  const monthlyPayment = parseFloat(fixedPaymentInput.value);
 
-  const months =
-    Math.log(
-      parseFloat(fixedAmount.value) /
-        (parseFloat(fixedAmount.value) - parseFloat(principal.value) * monthlyRate)
-    ) / Math.log(1 + monthlyRate);
+  if (principal <= 0 || interestRate < 0 || monthlyPayment <= 0) return;
 
-  if (!Number.isNaN(months)) {
-    console.log('months is valid');
-    updateDate(months);
-  } else {
-    console.log('months is not valid');
-    summaryCard.innerText = 'The loan can never be paid!';
+  let balance = principal;
+
+  let monthsCount = 0;
+  while (balance > 0) {
+    let interestPaid = balance * interestRate;
+    let principalPaid = monthlyPayment - interestPaid;
+
+    if (principalPaid <= 0) {
+      console.warn('Loan can never be paid,', { principalPaid, interestPaid });
+      return;
+    }
+
+    balance -= principalPaid;
+    monthsCount += 1;
   }
-}
 
-function updateDate(months) {
   let date = new Date();
-  if (checkbox.check) {
-    date.setMonth(date.getMonth() + Math.round(months));
+  if (checkboxInput.checked) {
+    date.setMonth(date.getMonth() + monthsCount - 1);
   } else {
-    date.setMonth(date.getMonth() + Math.round(months) - 1);
+    date.setMonth(date.getMonth() + monthsCount);
   }
 
   date = date.toLocaleDateString(undefined, {
@@ -52,17 +51,11 @@ function updateDate(months) {
     month: 'short',
   });
 
-  let totalPayment = parseFloat(fixedAmount.value) * months;
-  let totalInterestPaid = totalPayment - parseFloat(principal.value);
+  let totalPayment = monthlyPayment * monthsCount + balance;
 
-  let summaryTemplate = html`
-    <div>Loan completed by: ${date}</div>
-    <div>Total months: ${Math.round(months)}</div>
-    <div>Monthly payment: ₹${parseFloat(fixedAmount.value)}</div>
-    <div>Total principal paid: ₹${parseFloat(principal.value)}</div>
-    <div>Total interest paid: ₹${totalInterestPaid.toFixed(2)}</div>
-    <div>Total payment: ₹${totalPayment.toFixed(2)}</div>
-  `;
-
-  summaryCard.innerHTML = summaryTemplate;
+  summaryLastMonthEl.innerText = date;
+  summaryMonthsEl.innerText = monthsCount;
+  summaryPrincipalEl.innerText = principal;
+  summaryInterestEl.innerText = totalPayment - principal;
+  summaryPaymentEl.innerText = totalPayment.toFixed(2);
 }
