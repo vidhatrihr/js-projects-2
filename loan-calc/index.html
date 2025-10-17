@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Loan Calculator</h1>
+      <div class="container">
+        <form class="input-card">
+          <div>
+            <label>
+              Principal
+              <input type="number" id="principal" value="200000" />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Interest Rate (% p.a)
+              <input type="number" id="interest" value="12" />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Fixed Monthly Payment
+              <input type="number" id="fixed" value="20000" />
+            </label>
+          </div>
+
+          <div>
+            <label class="checkbox-label">
+              <input type="checkbox" id="checkbox" />
+              Include current month in calculation
+            </label>
+          </div>
+        </form>
+        <div class="summary-card"></div>
+      </div>
+    </main>
+  </body>
+</html>
