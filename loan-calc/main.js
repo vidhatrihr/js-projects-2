@@ -1,3 +1,5 @@
+const html = String.raw;
+
 let principalInput = document.querySelector('#principal');
 let interestInput = document.querySelector('#interest');
 let fixedPaymentInput = document.querySelector('#fixed-payment');
@@ -17,11 +19,17 @@ checkboxInput.addEventListener('change', calculateLoan);
 calculateLoan();
 
 function calculateLoan() {
+  console.log('calculateLoan');
+  document.querySelector('tbody').innerHTML = '';
+
   const principal = parseFloat(principalInput.value);
   const interestRate = parseFloat(interestInput.value) / 100 / 12;
   const monthlyPayment = parseFloat(fixedPaymentInput.value);
 
-  if (principal <= 0 || interestRate < 0 || monthlyPayment <= 0) return;
+  if (principal <= 0 || interestRate < 0 || monthlyPayment <= 0) {
+    console.warn('Invalid inputs');
+    return;
+  }
 
   let balance = principal;
 
@@ -37,14 +45,38 @@ function calculateLoan() {
 
     balance -= principalPaid;
     monthsCount += 1;
-  }
 
-  let date = new Date();
-  if (checkboxInput.checked) {
-    date.setMonth(date.getMonth() + monthsCount - 1);
-  } else {
-    date.setMonth(date.getMonth() + monthsCount);
+    console.log(interestPaid, principalPaid, balance);
+
+    updateTable({ monthsCount, interestPaid, principalPaid, balance });
   }
+  updateSummary({ monthlyPayment, monthsCount, principal, balance });
+}
+
+function updateTable({ monthsCount, interestPaid, principalPaid, balance }) {
+  let date = new Date();
+  date.setMonth(date.getMonth() + monthsCount - checkboxInput.checked);
+
+  date = date.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+  });
+
+  let template = html`
+    <tr>
+      <td>${date}</td>
+      <td>₹19</td>
+      <td>₹1</td>
+      <td>₹80</td>
+    </tr>
+  `;
+
+  document.querySelector('tbody').innerHTML += template;
+}
+
+function updateSummary({ monthlyPayment, monthsCount, principal, balance }) {
+  let date = new Date();
+  date.setMonth(date.getMonth() + monthsCount - checkboxInput.checked);
 
   date = date.toLocaleDateString(undefined, {
     year: 'numeric',
