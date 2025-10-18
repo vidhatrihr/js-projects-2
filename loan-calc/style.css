@@ -56,10 +56,12 @@ form {
 label {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 
 .checkbox-label {
+  gap: 0.5rem;
   justify-content: start;
 }
 
@@ -69,8 +71,8 @@ input[type='number'] {
 }
 
 input[type='checkbox'] {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 li {
@@ -87,6 +89,11 @@ td,
 th {
   padding: 10px;
   text-align: right;
+}
+
+td:first-child,
+th:first-child {
+  text-align: left;
 }
 
 tbody tr:nth-child(even) {
