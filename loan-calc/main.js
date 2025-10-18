@@ -51,11 +51,17 @@ function calculateLoan() {
     month: 'short',
   });
 
+  const rupeeFormatter = new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    minimumFractionDigits: 2,
+  });
+
   let totalPayment = monthlyPayment * monthsCount + balance;
 
   summaryLastMonthEl.innerText = date;
   summaryMonthsEl.innerText = monthsCount;
-  summaryPrincipalEl.innerText = principal;
-  summaryInterestEl.innerText = totalPayment - principal;
-  summaryPaymentEl.innerText = totalPayment.toFixed(2);
+  summaryPrincipalEl.innerText = rupeeFormatter.format(principal);
+  summaryInterestEl.innerText = rupeeFormatter.format(totalPayment - principal);
+  summaryPaymentEl.innerText = rupeeFormatter.format(totalPayment);
 }
