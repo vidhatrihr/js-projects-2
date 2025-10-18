@@ -10,90 +10,81 @@
   <body>
     <main>
       <h1>Loan Calculator</h1>
-      <div class="container">
-        <form class="input-card">
-          <div>
-            <label>
-              Principal
-              <input type="number" min="0" id="principal" value="100" />
-            </label>
-          </div>
 
-          <div>
-            <label>
-              Interest Rate (% p.a)
-              <input type="number" min="0" id="interest" value="12" />
-            </label>
-          </div>
-
-          <div>
-            <label>
-              Fixed Monthly Payment
-              <input type="number" min="0" id="fixed-payment" value="20" />
-            </label>
-          </div>
-
-          <div>
-            <label class="checkbox-label">
-              <input type="checkbox" id="checkbox" />
-              Include current month in calculation
-            </label>
-          </div>
-        </form>
-        <div class="summary">
-          <h2>Summary</h2>
-          <section class="summary-card">
-            <ul>
-              <li>
-                <strong>Loan completed by: </strong><span class="summary-last-month"> _</span>
-              </li>
-              <li><strong>Total months: </strong><span class="summary-months"> _</span></li>
-              <li>
-                <strong>Total principal paid: </strong><span class="summary-principal"> _</span>
-              </li>
-              <li>
-                <strong>Total interest paid: </strong><span class="summary-interest"> _</span>
-              </li>
-              <li><strong>Total payment: </strong><span class="summary-payment"> _</span></li>
-            </ul>
-          </section>
-          <section class="summary-table">
-            <h2>Amortization Schedule</h2>
-            <div class="table-container">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Month</th>
-                    <th>Principal Paid</th>
-                    <th>Interest Charged</th>
-                    <th>Balance</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Oct 2025</td>
-                    <td>₹19</td>
-                    <td>₹1</td>
-                    <td>₹80</td>
-                  </tr>
-                  <tr>
-                    <td>Oct 2025</td>
-                    <td>₹19</td>
-                    <td>₹1</td>
-                    <td>₹80</td>
-                  </tr>
-                  <tr>
-                    <td>Oct 2025</td>
-                    <td>₹19</td>
-                    <td>₹1</td>
-                    <td>₹80</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+      <form>
+        <div>
+          <label>
+            Principal
+            <input type="number" min="0" id="principal" value="100" />
+          </label>
         </div>
-      </div>
+
+        <div>
+          <label>
+            Interest Rate (% p.a)
+            <input type="number" min="0" id="interest" value="12" />
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Fixed Monthly Payment
+            <input type="number" min="0" id="fixed-payment" value="20" />
+          </label>
+        </div>
+
+        <div>
+          <label class="checkbox-label">
+            <input type="checkbox" id="checkbox" />
+            Include current month in calculation
+          </label>
+        </div>
+      </form>
+
+      <h2>Summary</h2>
+      <section class="summary">
+        <ul>
+          <li><strong>Loan completed by: </strong><span class="summary-last-month"> _</span></li>
+          <li><strong>Total months: </strong><span class="summary-months"> _</span></li>
+          <li><strong>Total principal paid: </strong><span class="summary-principal"> _</span></li>
+          <li><strong>Total interest paid: </strong><span class="summary-interest"> _</span></li>
+          <li><strong>Total payment: </strong><span class="summary-payment"> _</span></li>
+        </ul>
+      </section>
+
+      <h2>Amortization Schedule</h2>
+      <section class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Principal Paid</th>
+              <th>Interest Charged</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Oct 2025</td>
+              <td>₹19</td>
+              <td>₹1</td>
+              <td>₹80</td>
+            </tr>
+            <tr>
+              <td>Oct 2025</td>
+              <td>₹19</td>
+              <td>₹1</td>
+              <td>₹80</td>
+            </tr>
+            <tr>
+              <td>Oct 2025</td>
+              <td>₹19</td>
+              <td>₹1</td>
+              <td>₹80</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
   </body>
 </html>
