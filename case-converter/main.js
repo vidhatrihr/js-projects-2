@@ -1,9 +1,7 @@
-myInput = document.querySelector('#my-input').value;
-// myInput = myInput.toLowerCase();
-
 // snake_case
 
 function snakeCase() {
+  myInput = document.querySelector('#my-input').value;
   let myInputArr = myInput.split(' ');
   let NewMyInput = myInputArr.join('_');
 
@@ -13,6 +11,7 @@ function snakeCase() {
 // camelCase
 
 function camelCase() {
+  myInput = document.querySelector('#my-input').value;
   let NewMyInput = '';
   let myInputArr = myInput.split(' ');
 
@@ -26,6 +25,7 @@ function camelCase() {
 // PascalCase
 
 function pascalCase() {
+  myInput = document.querySelector('#my-input').value;
   let NewMyInput = '';
   let myInputArr = myInput.split(' ');
   myInputArr.forEach(word => {
@@ -38,6 +38,7 @@ function pascalCase() {
 // kebab-case
 
 function kebabCase() {
+  myInput = document.querySelector('#my-input').value;
   let myInputArr = myInput.split(' ');
   let NewMyInput = myInputArr.join('-');
 
@@ -47,6 +48,7 @@ function kebabCase() {
 // Sentence case
 
 function sentenceCase() {
+  myInput = document.querySelector('#my-input').value;
   let NewMyInput = myInput[0].toUpperCase() + myInput.slice(1, myInput.length);
   document.querySelector('.result').value = NewMyInput;
 }
@@ -54,6 +56,7 @@ function sentenceCase() {
 // Title Case
 
 function titleCase() {
+  myInput = document.querySelector('#my-input').value;
   let NewMyInput = [];
   for (let word of myInput.split(' ')) {
     word = word[0].toUpperCase() + word.slice(1, myInput.length);
@@ -63,5 +66,6 @@ function titleCase() {
 }
 
 function clearInput() {
+  myInput = document.querySelector('#my-input').value;
   document.querySelector('.result').value = '';
 }

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 1rem;
+  max-width: 500px;
+  margin: 150px auto;
+  border: 1px solid black;
+}
+
+h1 {
+  padding: 1rem;
+  text-align: center;
+}
+
+input {
+  white-space: wrap;
+  /* overflow: hidden; */
+  font-size: 0.9rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  max-width: 500px;
+  text-wrap: wrap;
+}
+
+button {
+  margin: 0.5rem;
+  max-width: 200px;
+  padding: 0.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: darkslateblue;
+}
+
+button.clear {
+  background-color: brown;
+}
