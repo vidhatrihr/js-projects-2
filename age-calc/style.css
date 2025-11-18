@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: rgb(254, 209, 224);
+  color: white;
+  text-shadow: 1px 1px rgb(217, 153, 174);
 }
 
 #container {
@@ -16,8 +18,10 @@ body {
   text-align: center;
   padding: 2rem;
   line-height: 3rem;
-  border: 1px solid #aeaeae;
-  background-color: white;
+  border: 1px solid rgb(217, 153, 174);
+  border-radius: 5px;
+  background-color: palevioletred;
+  box-shadow: 6px 8px rgb(217, 153, 174);
 }
 
 button {
@@ -27,4 +31,12 @@ button {
   color: white;
   border-radius: 0.2rem;
   background-color: rgb(72, 109, 231);
+}
+
+input {
+  padding: 5px;
+  background-color: rgb(254, 209, 224);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
 }

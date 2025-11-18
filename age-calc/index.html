@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
     <title>Age Calculator</title>
   </head>
   <body>
@@ -11,10 +12,10 @@
       <div id="container">
         <h1>Age Calculator</h1>
         <h3>Enter your date of birth</h3>
-        <input type="date" />
+        <input onchange="displayDate()" type="date" />
         <br />
-        <button>Click</button>
-        <h2>Your are 21 years old</h2>
+        <!-- <button>Click</button> -->
+        <h2 id="display"></h2>
       </div>
     </main>
   </body>
