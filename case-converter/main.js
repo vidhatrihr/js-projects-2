@@ -1,71 +1,74 @@
-// snake_case
+myResult = document.querySelector('.result');
 
-function snakeCase() {
+document.querySelector('.camel').addEventListener('click', function () {
   myInput = document.querySelector('#my-input').value;
-  let myInputArr = myInput.split(' ');
-  let NewMyInput = myInputArr.join('_');
-
-  document.querySelector('.result').value = NewMyInput;
-}
-
-// camelCase
-
-function camelCase() {
-  myInput = document.querySelector('#my-input').value;
-  let NewMyInput = '';
-  let myInputArr = myInput.split(' ');
-
-  myInputArr.forEach(word => {
-    NewMyInput += word[0].toUpperCase() + word.slice(1, word.length);
-    NewMyInput = NewMyInput[0].toLowerCase() + NewMyInput.slice(1, NewMyInput.length);
-  });
-  document.querySelector('.result').value = NewMyInput;
-}
-
-// PascalCase
-
-function pascalCase() {
-  myInput = document.querySelector('#my-input').value;
-  let NewMyInput = '';
-  let myInputArr = myInput.split(' ');
-  myInputArr.forEach(word => {
-    NewMyInput += word[0].toUpperCase() + word.slice(1, word.length);
-  });
-
-  document.querySelector('.result').value = NewMyInput;
-}
-
-// kebab-case
-
-function kebabCase() {
-  myInput = document.querySelector('#my-input').value;
-  let myInputArr = myInput.split(' ');
-  let NewMyInput = myInputArr.join('-');
-
-  document.querySelector('.result').value = NewMyInput;
-}
-
-// Sentence case
-
-function sentenceCase() {
-  myInput = document.querySelector('#my-input').value;
-  let NewMyInput = myInput[0].toUpperCase() + myInput.slice(1, myInput.length);
-  document.querySelector('.result').value = NewMyInput;
-}
+  myResult.value = camelCase(myInput);
+});
+document.querySelector('.snake').addEventListener('click', function () {
+  myResult.value = snakeCase(myInput);
+});
+document.querySelector('.pascal').addEventListener('click', function () {
+  myResult.value = pascalCase(myInput);
+});
+document.querySelector('.kebab').addEventListener('click', function () {
+  myResult.value = kebabCase(myInput);
+});
+document.querySelector('.sentence').addEventListener('click', function () {
+  myResult.value = sentenceCase(myInput);
+});
+document.querySelector('.title').addEventListener('click', function () {
+  myResult.value = titleCase(myInput);
+});
+document.querySelector('.clear').addEventListener('click', function () {
+  myResult.value = '';
+});
 
 // Title Case
 
-function titleCase() {
-  myInput = document.querySelector('#my-input').value;
+function titleCase(myInput) {
   let NewMyInput = [];
   for (let word of myInput.split(' ')) {
     word = word[0].toUpperCase() + word.slice(1, myInput.length);
     NewMyInput += `${word} `;
   }
-  document.querySelector('.result').value = NewMyInput;
+  return NewMyInput;
 }
 
-function clearInput() {
-  myInput = document.querySelector('#my-input').value;
-  document.querySelector('.result').value = '';
+// Sentence case
+
+function sentenceCase(myInput) {
+  let NewMyInput = myInput[0].toUpperCase() + myInput.slice(1, myInput.length);
+  return NewMyInput;
+}
+
+// snake_case
+
+function snakeCase(myInput) {
+  let myInputArr = myInput.split(' ');
+  let NewMyInput = myInputArr.join('_');
+  return NewMyInput;
+}
+
+// camelCase
+
+function camelCase(myInput) {
+  let myInputArr = titleCase(myInput).split(' ');
+  myInputArr[0] = myInputArr[0].toLowerCase();
+  return myInputArr.join('');
+}
+
+// PascalCase
+
+function pascalCase(myInput) {
+  let myInputArr = titleCase(myInput).split(' ');
+  return myInputArr.join('');
+}
+
+// kebab-case
+
+function kebabCase(myInput) {
+  let myInputArr = myInput.split(' ');
+  let NewMyInput = myInputArr.join('-');
+
+  return NewMyInput;
 }
